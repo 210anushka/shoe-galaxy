@@ -1,0 +1,24 @@
+relative path=path realted to parent folder 
+
+absolute path=actual path ya full path
+
+dot operator(../)=yeh hume ek folder piche bhej deta hai
+
+hyperlink=hyper mtlb navigation hota hai
+navigation mtlb hum kha se kha jaa rahy hai
+
+js is used for functionining and for validation
+es6 version of js -2015 till now
+
+alert=window.alert
+
+variable can be declared in 3 forms--
+a) let
+b) const
+c) var
+
+for print -for print on console- we use console.log()
+        -for print on html page-document.write()
+
+getelementbyclass=return array 
+it gives arry we need to call by array[0]

@@ -1,0 +1,55 @@
+body{
+   background-repeat: no-repeat;
+   background-size: cover;
+  
+   
+   
+}
+div{
+    /* width: 40%; */
+    height:500px;
+    margin-left: 100px;
+    opacity: 0.6;
+    margin-top: 100px;
+    
+
+}
+h1{
+    margin-left: 240px;
+    color: black;
+    font-family: "Montserrat";
+    
+
+    
+}
+.box{
+    width: 30%;
+    height: 30px;
+    margin-left: 100px;
+    border-radius: 4px;
+    padding: 5px;
+}
+form{
+    margin-left: 20px;
+}
+button{
+    background-color:rgba(228, 55, 55, 0.621);
+    margin-left: 240px;
+    height: 30px;
+    width:10% ;
+    color:black;
+    border-radius: 4px;
+    font-family: "Montserrat";
+    
+}
+.box1{
+    font-size: 18px;
+    margin-left: 100px;
+    font-family: "Montserrat";
+    
+}
+.box2{
+    margin-left: 100px;
+    font-family: "Montserrat";
+    
+}

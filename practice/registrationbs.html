@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body background="../images/bg2.jpg"  style="background-repeat: no-repeat; background-size: 150%;">  
+    <h1 style="margin-left: 100px;">REGISTRATION FORM</h1>
+    <h5 style="margin-left: 100px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Complete this form to express your interest in upcoming web development course</h5>
+    <h3 style="margin-left: 100px; margin-top: 40px;">Login Details</h3>
+
+<form style="margin-left: 100px;">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="password" required>
+        <label for="re-enter" class="form-label">Re-Enter Password</label>
+        <input onchange="passval()" type="password" class="form-control" id="re-enter" placeholder="re-enter password" required>  
+    <h3>Personal Information</h3>
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="anushka" required>
+    <label for="phone no" class="form-label">Phone no</label> 
+    <input type="tel" class="form-control" id="phone no" placeholder="8126*****1" required>
+    <label for="roll no" class="form-label">University roll no</label>
+    <input type="number" class="form-control" id="roll no" placeholder="29001****" required>
+    <label for="branch" class="form-label">Branch</label>
+    <input type="text" class="form-control" id="branch" placeholder="CSE" required>
+
+    <label>Section</label><br>
+    <input type="radio" id="section1" name="section" value="A" checked/>   <label for="section"  class="form-label">A</label>
+    <input type="radio" id="section2" name="section" value="B"/>     <label for="section2"  class="form-label">B</label>
+    <input type="radio" id="section3" name="section" value="C"/>     <label for="section3"  class="form-label">C</label>
+    <br>
+    <input type="checkbox" id="valid" style="margin-top: 10px;">
+    <label for="valid" class="form-label">I have read and agree to the terms and condition</label><br>
+        <center>
+        <button onclick="disp()" class="btn btn-success" type="button">Submit Form</button>
+        <button class="btn btn-danger" type="reset">Reset Form</button>
+        <div>
+            <h3 id="op"></h3>
+            <h3 id="email1"></h3>
+            <h3 id="password2"></h3>
+            <h3 id="re-enter3"></h3>
+            <h3 id="name4"></h3>
+            <h3 id="phone no5"></h3>
+            <h3 id="roll no6"></h3>
+            <h3 id="branch7"></h3>
+            <h3 id="section8"></h3>
+        </div>
+    </center>
+</form>
+</body>
+<script>
+    function passval(){
+        let pass=document.getElementById("password").value;
+        let conpass=document.getElementById("re-enter").value;
+        if(pass==""){
+            window.alert("please enter password");
+        }
+        if(pass!=conpass){
+            window.alert("password not match with Re-Enter password");
+        }
+        if(pass.length<8){
+            window.alert("you have to enter at least 8 digit password");
+        }
+         let cnt=0;
+         for(let i=0;i<pass.length;i++){
+            // console.log("1");
+             if(pass[i]=='0' || pass[i]=='1' || pass[i]=='2' || pass[i]=='3' ||  pass[i]=='4' || pass[i]=='5' || pass[i]=='6' || pass[i]=='7' || pass[i]=='8' || pass[i]=='9'){
+                 cnt++;
+             }
+         }
+         if(cnt==0) window.alert("you have to enter at least one digit in your password");
+
+         let cnt1=0;
+         for(let j=0;j<pass.length;j++){
+            let character=pass[j];
+            if(character.charCodeAt(j)>=65 &&  character.charCodeAt(j)<=90)
+            cnt1++;
+         }
+         if(cnt1==0) window.alert("you have to enter at least one uppercase value")
+
+         let cnt2=0;
+         for(let k=0;k<pass.length;k++){
+            if(pass[k]=='@' || pass[k]=='$' || pass[k]=='%' || pass[k]=='&' || pass[k]=='!' || pass[k]=='^' || pass[k]=='?' || pass[k]=='~' || pass[k]=='#')
+            cnt2++;
+         }
+         if(cnt2==0) window.alert("add at least one special character");
+    }
+
+
+    function disp(){
+        let an=document.getElementById("op");
+        an.innerHTML="your form is successfully sumitted";
+
+
+        let em=document.getElementById("email").value;
+        let a=document.getElementById("email1");
+        a.innerHTML="your email is " +em;
+
+        let pa=document.getElementById("password").value;
+        let b=document.getElementById("password2");
+        b.innerHTML="your password is " +pa;
+
+        let re=document.getElementById("re-enter").value;
+        let c=document.getElementById("re-enter3");
+        c.innerHTML="your re-enter password is " +re;
+
+        let na=document.getElementById("name").value;
+        let d=document.getElementById("name4");
+        d.innerHTML="your name is " +na;
+
+        let ph=document.getElementById("phone no").value;
+        let e=document.getElementById("phone no5");
+        e.innerHTML="your phone no is " +ph;
+
+        let roll=document.getElementById("roll no").value;
+        let f=document.getElementById("roll no6");
+        f.innerHTML="your roll no is " +roll;
+
+        let bra=document.getElementById("branch").value;
+        let g=document.getElementById("branch7");
+        g.innerHTML="your branch is " +bra;
+
+        var ele=document.getElementsByName('section');
+        for(i=0;i<ele.length;i++){
+            if(ele[i].checked)
+            document.getElementById("section8").innerHTML="your section is: " + ele[i].value;
+        }
+        
+    }
+</script>
+<!-- <script>
+    function forcheck(){
+        let pass=document.getElementById("password").value;
+        // document.write(pass);
+        let conpass=document.getElementById("re-enter").value;
+        // document.write(conpass);
+        if(pass!=conpass){
+            window.alert("password not match with Re-Enter password");
+        }
+    }
+</script> -->
+<!-- <script>
+    function passval(){
+        let pass=document.getElementById("password").value;
+        let conpass=document.getElementById("re-enter").value;
+        if(pass==""){
+            window.alert("please enter password");
+        }
+        if(pass!=conpass){
+            window.alert("password not match with Re-Enter password");
+        }
+        if(pass.length<8){
+            window.alert("you have to enter at least 8 digit password");
+        }
+         let cnt=0;
+         for(let i=0;i<pass.length;i++){
+            // console.log("1");
+             if(pass[i]=='0' || pass[i]=='1' || pass[i]=='2' || pass[i]=='3' ||  pass[i]=='4' || pass[i]=='5' || pass[i]=='6' || pass[i]=='7' || pass[i]=='8' || pass[i]=='9'){
+                 cnt++;
+             }
+         }
+         if(cnt==0) window.alert("you have to enter at least one digit in your password");
+
+         let cnt1=0;
+         for(let j=0;j<pass.length;j++){
+            let character=pass[j];
+            if(character.charCodeAt(j)>=65 &&  character.charCodeAt(j)<=90)
+            cnt1++;
+         }
+         if(cnt1==0) window.alert("you have to enter at least one uppercase value")
+
+         let cnt2=0;
+         for(let k=0;k<pass.length;k++){
+            if(pass[k]=='@' || pass[k]=='$' || pass[k]=='%' || pass[k]=='&' || pass[k]=='!' || pass[k]=='^' || pass[k]=='?' || pass[k]=='~' || pass[k]=='#')
+            cnt2++;
+         }
+         if(cnt2==0) window.alert("add at least one special character");
+    }
+</script> -->
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body id="mn">
+    <div style="height: 50px; width: 1536px; background-color: purple;">
+        <center><h1 style="color: white; font-family: cursive;"><b>ACHIVEMENTS</b></h1></center>
+    </div>
+
+    <div id="d1">
+    <div class="row mt-5">
+        <div class="col-md-3">
+            <h4 style="margin-left: 40px;">S.no</h4>
+        </div>
+        <div class="col-md-3">
+            <h4>Title</h4>
+        </div>
+        <div class="col-md-3">
+            <h4>Description </h4>
+        </div>
+        <div class="col-md-3">
+            <h4>Year</h4>
+        </div>
+    </div>
+
+    
+    <div class="row mt-2" >
+        <div class="col-md-3" id="r2">
+            <h4 style="margin-left: 80px;">1</h4>
+        </div>
+        <div class="col-md-3" id="r3">
+            <input type="text"  class="form-control" placeholder="Title">
+        </div>
+        <div class="col-md-3" id="r4">
+            <input type="text"  class="form-control" placeholder="description">
+        </div>
+        <div class="col-md-2" id="r5">
+            <input type="text" class="form-control" placeholder="20XX">
+        </div>
+    </div>
+</div>
+
+
+    <div class="row mt-5">
+        <div class="col-md-1">
+        <center><button type="button" onclick="box2()" class="btn btn-success" style="margin-left: 700px;">+</button></center>
+    </div>
+</div>
+</body>
+<script>
+
+let inc=2;
+//    let l=document.getElementById("r2");
+//    let m=document.getElementById("r3");
+//    let n=document.getElementById("r4");
+//    let o=document.getElementById("r5");
+   let ans=document.getElementById("d1")
+function box2(){
+    let a=document.createElement("div");
+    a.setAttribute("class","row mt-3");
+
+    let b=document.createElement("div");
+    b.setAttribute("class","col-md-3");
+    let b1=document.createElement("h4");
+    b1.innerHTML=inc;
+    inc++;
+    b1.setAttribute("style","margin-left:80px");
+    
+    let c=document.createElement("div");
+    c.setAttribute("class","col-md-3");
+    let c1=document.createElement("input");
+    c1.setAttribute("placeholder","title");
+    c1.setAttribute("class","form-control");
+    c1.setAttribute("style","margin-top:10px");
+
+    let d=document.createElement("div");
+    d.setAttribute("class","col-md-3");
+    let d1=document.createElement("input")
+    d1.setAttribute("placeholder","description");
+    d1.setAttribute("class","form-control");
+    d1.setAttribute("style","margin-top:10px");  
+
+    let e=document.createElement("div");
+    e.setAttribute("class","col-md-3");
+    let e1=document.createElement("input")
+    e1.setAttribute("placeholder","20XX");
+    e1.setAttribute("class","form-control");
+    e1.setAttribute("style","margin-top:10px");
+    
+    b.appendChild(b1);
+    c.appendChild(c1);
+    d.appendChild(d1);
+    e.appendChild(e1);
+
+
+
+
+    a.appendChild(b);
+    a.appendChild(c);
+    a.appendChild(d);
+    a.appendChild(e);
+
+    ans.appendChild(a);
+
+}
+
+
+</script>
+
+
+
+<!-- 
+//    let inc=2;
+//    let a=document.getElementById("r2");
+//    let b=document.getElementById("r3");
+//    let c=document.getElementById("r4");
+//    let d=document.getElementById("r5");
+//    function box2(){
+//         let n=document.createElement("h4");
+//         n.innerHTML=inc;
+//         inc++;
+//         n.setAttribute("style","margin-left:80px");
+//         // n.setAttribute("class","m-4");
+        
+        
+
+//         let o=document.createElement("input");
+//         o.setAttribute("placeholder","title");
+//         o.setAttribute("class","form-control");
+//         o.setAttribute("style","margin-top:10px");
+
+
+//         let p=document.createElement("input");
+//         p.setAttribute("placeholder","description");
+//         p.setAttribute("class","form-control");
+//         p.setAttribute("style","margin-top:10px");
+
+//         let q=document.createElement("input");
+//         q.setAttribute("placeholder","20XX");
+//         q.setAttribute("class","form-control");
+//         q.setAttribute("style","margin-top:10px");
+
+
+//         a.appendChild(n);
+//         b.appendChild(o);
+//         c.appendChild(p);
+//         d.appendChild(q);
+ // } -->
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body id="bb1" style="background-color: pink;">
+    <center><h1 style="font-family: cursive; color: darkorchid;">HTML DOM</h1></center>
+    <br><br>
+    <div id="add">
+    <div class="row">
+       <div class="col-md-4 mt-5">
+        <button type="button" id="c1" onclick="fun()" class="btn btn-info" style="margin-left: 100px;">create button</button>
+       </div>
+       <div class="col-md-4 mt-5">
+        <button type="button" id="c2" onclick="fun1()" class="btn btn-warning" style="margin-left: 100px; ">create input</button>
+       </div>
+       <div class="col-md-4 mt-5">
+        <button type="button" id="c3" onclick="fun2()" class="btn btn-outline-dark" style="margin-left: 100px;">change color</button>
+       </div>
+    </div>
+</div>
+</body>
+
+<script>
+    let i=0;
+    // let a=document.getElementById("c1");
+    // let b=document.getElementById("c2");
+    let col=["background-color:lightgreen","background-color:green","background-color:blue","background-color:pink","background-color:orange","background-color:yellow","background-color:brown","background-color:purple"];
+    let bb=document.getElementById("bb1");
+    let ans=document.getElementById("add");
+    let a=document.createElement("div");
+        a.setAttribute("class","row mt-4");
+    
+       function fun(){
+        let b=document.createElement("div");
+        b.setAttribute("class","col-md-3");
+        let b1=document.createElement("button");
+        b1.innerHTML="button";
+        b1.setAttribute("style","margin-left:100px");
+        b1.setAttribute("class","btn btn-info");
+        b.appendChild(b1);
+        a.appendChild(b);
+       }
+
+       function fun1(){
+        let c=document.createElement("div");
+        c.setAttribute("class","col-md-3");
+        let c1=document.createElement("input");
+        c1.setAttribute("placeholder","input field created");
+        c1.setAttribute("style","margin-left:100px");
+        c.appendChild(c1);
+        a.appendChild(c);
+       }
+
+       function fun2(){
+        bb.setAttribute("style",col[i]);
+        i++; 
+       }
+        ans.appendChild(a);
+        
+
+    
+</script>
+</html>

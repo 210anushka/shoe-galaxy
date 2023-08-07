@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/login copy.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+<body background="../images/SIGNUP.jpg">
+    
+    <div>
+    <h1>Sign Up</h1>
+    
+    <form>
+        
+            <label class="box1">Username</label><br>
+            <input type="text" placeholder="e.g John" class="box" id="user" required><br><br>
+            <label class="box1">Email</label><br>
+            <input type="text" placeholder="xyz@gmail.com" class="box" id="mail" required><br><br>
+            <label class="box1">Password</label><br>
+            <input type="password" placeholder="Enter your Password" id="password" class="box" required><br><br>
+            <label class="box1">Confirm password</label><br>
+            <input type="password" placeholder="Re-Enter your Password" id="conpass" class="box" required><br><br>
+            <input type="checkbox" id="permission" name="permission" value="terms and condition" class="box2" required>
+            <label for="permission">I agree to the Terms of User</label><br><br>
+            <button type="button" onclick="fun()" class="btn"><b>Sign Up</b></button><br>
+            
+    </form>
+</div> 
+</body>
+<script>
+    function fun(){
+        // let an=document.getElementById("op");
+        // an.innerHTML="Your form has been successfully submitted!";
+        let a=document.getElementById("user").value;
+        let b=document.getElementById("mail").value;
+        let c=document.getElementById("password").value;
+        let d=document.getElementById("conpass").value;
+        if(a=="" && b=="" && c=="" && d==""){
+            window.alert("Please fill the form")
+        }
+        else if(a==""){
+            window.alert("Please enter valid userName")
+        }
+        else if(b==""){
+            window.alert("please enter your email");
+         }
+         else if(c==""){
+            window.alert("please enter password");
+         }
+         else if(d==""){
+            window.alert("please enter confirm- password");
+         }
+         else if(password!=conpass){
+            window.alert("Password and confirm Password should be same")
+         }
+        else{
+            window.alert("Your form has been successfully Sunmitted!");
+            window.location.href = 'second.html';
+         }
+        
+    }
+</script>
+</html>

@@ -1,0 +1,53 @@
+.d2{
+    background-color: white;
+}
+#icart{
+    margin-left: 15px;
+    margin-right: 20px;
+    color: black;
+}
+#iheart{
+    margin-right: 15px;
+    color: black;
+}
+#com{
+    margin-right: 20px;
+    color: black;
+}
+#navcol{
+    color: black;
+}
+#Redtape{
+    width: 100%;
+    height: 400px;
+}
+.slides4{
+    height: 350px;
+}
+#heart{
+    margin-left: 20px;
+   font-size: 25px;
+}
+#cart{
+    margin-left: 20px;
+    font-size: 25px;
+}
+#card2{
+    display: inline-block;
+}
+#card1{
+    display: inline-block;
+      width: 18rem; 
+      margin: 20px;
+      margin-left: 60px;
+      /* height: 300px; */
+    
+  }
+  #topbrands{
+      height: 300px;
+      
+  }
+  #comparebtn{
+    background-color: #af7ac5;
+    color: whitesmoke;
+}

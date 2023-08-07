@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="/login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+</head>
+<body background="../images/logooo1.jpg">
+   
+    <div class="div1">
+        <h1 class="had1"><b>Login</b></h1><br>
+        <h4 class="had2">Login to get exciting offers and best price on every order!</h4><br>
+    <form>
+        <label for="username" class="form-label">Username</label><br>
+        <input class="box1" type="text" class="form-control" id="user" placeholder="ex-john" required><br><br>
+        <label for="password" class="form-label">Password</label><br>
+        <input class="box1" type="password" class="form-control" id="password" placeholder="password" required><br><br>
+        
+        <input type="checkbox" id="valid" class="box2">
+        <label for="valid">I have read and agree to the terms and condition</label><br><br>
+
+        <button onclick="fun()" id="butt" type="button">LOGIN</button><br><br>
+        
+       <a href="/layout/sign up.html"> <h6 style="margin-left: 240px;">Create New Account</h6></a><br>
+        <h6 id="op" style="margin-left: 170px;"></h6>
+    </form>
+    </div>  
+     
+</body>
+<script>
+        const users={ 
+        anmol:"1234",
+        anushka:"000",
+        golu:"222",
+        bholu:"444"
+    };
+
+    function fun(){
+        
+        // let an=document.getElementById("op");
+        // an.innerHTML="Your form has been successfully submitted!";
+        let a=document.getElementById("user").value;
+        let b=document.getElementById("password").value;
+        if(a=="" && b==""){
+            window.alert("Please enter username and password")
+        }
+        else if(a==""){
+            window.alert("Please enter valid userName")
+        }
+        else if(b==""){
+            window.alert("please enter password");
+         }
+        else{
+        let name=Object.keys(users);
+        for(val of name){
+            if(val==a){
+                if(b==users[val]){
+                     window.alert("successfully logged in");
+                     window.location.href='second.html';
+                     { break; }
+                    }
+                else{
+                    window.alert("incorrect password");
+                }
+                }
+                else{
+                window.alert("user not found please sign up");
+            } 
+            
+            }
+        }
+    }
+</script>
+</html>

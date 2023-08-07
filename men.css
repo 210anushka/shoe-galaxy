@@ -1,0 +1,95 @@
+.type
+{
+    display: inline;
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-evenly;
+    
+}
+.circle
+{
+    width:12rem;
+    height: 180px;
+    border-radius: 2000px;
+    margin : 5px 5px 0px 30px;
+    box-shadow: 3px 3px 3px gray
+}
+.typesname
+{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 67px;
+    margin-top: 0px;
+    margin-left: 70px;
+}
+.slides3{
+    height: 480px;
+    border-radius: 10px;
+}
+.slides4{
+    height: 350px;
+}
+.circle1
+{
+    width:300px;
+    height: 300px;
+    margin : 5px 7px 0px 40px;
+    padding: 20px;
+    margin-left: 80px;
+    border-radius: 30px;
+
+}
+.brandname
+{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 150px;
+    margin-left: 30px;
+}
+#f4{
+    height: 300px;
+}
+#f5{
+    margin-left: 30px;
+}
+#f6{
+    width: 18rem;
+    margin: 10px;
+}
+p{
+    height: 50px;
+}
+#iheart{
+    margin-left: 30px;
+   margin:10px;
+   color: black;
+}
+
+button{
+    color: white;
+    background-color: #af7ac5;
+    border:0px;
+
+}
+#icart1{
+    margin-left: 15px;
+    margin-right: 20px;
+    color: black;
+}
+#iheart1{
+    margin-right: 15px;
+    color: black;
+}
+#com{
+    margin-right: 20px;
+    color: black;
+}
+#navcol{
+   color:black;
+}
+.slides5
+{
+    height: 600px;
+    width: 400px;
+    margin-left: 20px;
+}

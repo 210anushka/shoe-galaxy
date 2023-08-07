@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #lunch{
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            letter-spacing: 20px;
+        }
+        table{
+            width: 100%;
+            height: 600px;
+        }
+        body {
+            background-color: lightpink;
+            margin: auto;
+        }
+        h1 {
+            color: brown;
+        }
+        p {
+            color: midnightblue;
+        }
+        td,th{
+            text-align: center;
+        }
+        #r1{
+            background-color: aquamarine;
+        }
+        #r2{
+            background-color:bisque;
+        }
+        #r3{
+           background-color: bisque;
+        }
+        #r4{
+            background-color: blueviolet;
+        }
+        #r5{
+            background-color: blueviolet;
+        }
+        #r6{
+            background-color: palevioletred;
+        }
+        #r7{
+            background-color: palevioletred;
+        }
+        #r8{
+            background-color: whitesmoke;
+        }
+        #r9{
+            background-color: whitesmoke;
+        }
+        #r10{
+            background-color: teal;
+        }
+        #r11{
+            background-color: teal;
+        }
+        </style>
+    <title>TIME TABLE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger" >
+        <div class="container-fluid" >
+          <a class="navbar-brand" href="#">INSTAMALL</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 1100px;">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">LOGIN</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">REGISTER</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ASSIGNMENT
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/layout/timetable.html">DAY 1</a></li>
+                  <li><a class="dropdown-item" href="/index.html">DAY 2</a></li>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                  <li><a class="dropdown-item" href="/layout/photogallery.html">DAY 3</a></li>
+                  <li><a class="dropdown-item" href="images/internship.jpg">DAY 4</a></li>
+                </ul>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li> -->
+            </ul>
+            <!-- <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+          </div>
+        </div>
+      </nav>
+    <h1><marquee> COLLEGE TIME TABLE</marquee></h1>
+    <table cellspacing="2" border="2" align="center">
+        <tr id="r1">
+            <th><p>Day/Period</p></th>
+            <th>1st</th>
+            <th>2nd</th>
+            <th>3rd</th>
+            <th>4th</th>
+            <th rowspan="12" id="lunch">LUNCH</th>
+            <th>5th</th>
+            <th>6th</th>
+            <th>7th</th>
+            <th>8th</th>
+        </tr>
+        <tr id="r2">
+            <td rowspan="2"><p>MONDAY</p></td>
+            <td rowspan="2">TC</td>
+            <td rowspan="2">SI</td>
+            <td colspan="2">DSTL LAB </td>
+            <td rowspan="2">P</td>
+            <td rowspan="2">COA</td>
+            <td rowspan="2">DS</td>
+            <td rowspan="2">DSTL</td>
+        </tr>
+        <tr id="r3">
+            <td colspan="2">COA LAB</td>
+        </tr>
+        <tr id="r4">
+            <td rowspan="2"><p>TUESDAY</p></td>
+            <td rowspan="2">DS</td>
+            <td rowspan="2">P</td>
+            <td colspan="2">DS LAB</td>
+            <td rowspan="2">SI</td>
+            <td rowspan="2">DS</td>
+            <td rowspan="2">COA</td>
+            <td rowspan="2">DSTL</td>
+        </tr>
+        <tr id="r5">
+            <td colspan="2">SI LAB</td>
+        </tr>
+        <tr id="r6">
+            <td rowspan="2"><p>WEDNESDAY</p></td>
+            <td rowspan="2">COA</td>
+            <td rowspan="2">P</td>
+            <td rowspan="2">TC</td>
+            <td rowspan="2">DS</td>
+            <td rowspan="2">DSTL</td>
+            <td rowspan="2">SI</td>
+            <td colspan="2">TC LAB</td>
+        </tr>
+        <tr id="r7">
+            <td colspan="2">SI LAB</td>
+        </tr>
+        
+        <tr id="r8">
+            <td rowspan="2"><p>THURSDAY</p></td>
+            <td rowspan="2">P</td>
+            <td rowspan="2">DSTL</td>
+            <td rowspan="2">DS</td>
+            <td rowspan="2">COA</td>
+            <td colspan="2">TC LAB</td>
+            <td rowspan="2">TC</td>
+            <td rowspan="2">SI</td>
+        </tr>
+        <tr id="r9">
+            <td colspan="2">DSTL LAB</td>
+        </tr>
+            <tr id="r10" >
+            <td rowspan="2"><p>FRIDAY</p></td>
+            <td rowspan="2">DS</td>
+            <td rowspan="2">P</td>
+            <td rowspan="2">DSTL</td>
+            <td rowspan="2">SI</td>
+            <td rowspan="2">DS</td>
+            <td rowspan="2">DSTL</td>
+            <td colspan="2">COA LAB</td>
+        </tr>
+        <tr id="r11">
+            <td colspan="2">DSTL LAB</td>
+        </tr>
+    </table>
+</body>
+</html>
